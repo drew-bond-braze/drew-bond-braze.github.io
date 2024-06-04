@@ -21,7 +21,7 @@
     allowUserSuppliedJavascript: true  
   });
   braze.toggleLogging();
-  braze.changeUser('paul_dashboard');
+  braze.changeUser('drew_dashboard');
   // optionally show all in-app messages without custom handling
   braze.automaticallyShowInAppMessages();
   //IAM KVP handler
@@ -40,11 +40,11 @@
   braze.subscribeToContentCardsUpdates(function(cards){
   });
   //Feature Flags
-  const featureFlag = braze.getFeatureFlag("paul_test");
+  const featureFlag = braze.getFeatureFlag("drew_test");
   if (featureFlag.enabled) {
-    console.log(`paul_test is enabled`);
+    console.log(`drew_test is enabled`);
   } else {
-    console.log(`paul_test is not enabled`);
+    console.log(`drew_test is not enabled`);
   }
   const featureFlagProp = braze.getFeatureFlag("prop");
   braze.openSession();
@@ -55,7 +55,7 @@
 
 
 <nav>
-    <h3>Your Personalized Feed</h3>
+    <h3>Drew's Personalized Feed</h3>
     <div id="feed"></div>
 </nav>
 <button id="toggle" type="button">Toggle Cards Feed</button>
