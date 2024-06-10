@@ -21,11 +21,11 @@
     allowUserSuppliedJavascript: true  
   });
   braze.toggleLogging();
-  braze.changeUser('paul_dashboard');
+  braze.changeUser('drew_dashboard');
   // optionally show all in-app messages without custom handling
   braze.automaticallyShowInAppMessages();
   //IAM KVP handler
-  /*braze.subscribeToInAppMessage(function(inAppMessage) {
+  braze.subscribeToInAppMessage(function(inAppMessage) {
   if (inAppMessage instanceof braze.InAppMessage) {
     const extras = inAppMessage.extras;
     if (extras) {
@@ -35,7 +35,7 @@
     }
   }
   braze.showInAppMessage(inAppMessage);
-});*/
+  });
   // if you use Content Cards
   braze.subscribeToContentCardsUpdates(function(cards){
   });
