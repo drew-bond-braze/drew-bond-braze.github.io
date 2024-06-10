@@ -40,11 +40,11 @@
   braze.subscribeToContentCardsUpdates(function(cards){
   });
   //Feature Flags
-  const featureFlag = braze.getFeatureFlag("paul_test");
+  const featureFlag = braze.getFeatureFlag("drew_test");
   if (featureFlag.enabled) {
-    console.log(`paul_test is enabled`);
+    console.log(`drew_test is enabled`);
   } else {
-    console.log(`paul_test is not enabled`);
+    console.log(`drew_test is not enabled`);
   }
   const featureFlagProp = braze.getFeatureFlag("prop");
   braze.openSession();
@@ -132,7 +132,7 @@
         };
         alert("The form was submitted");
         braze.changeUser(external_id);
-        braze.logCustomEvent('Form Submitted', {'paulTestKey': true});
+        braze.logCustomEvent('Form Submitted', {'drewTestKey': true});
         braze.getUser().setFirstName(firstname);
         braze.getUser().setLastName(lastname);
         braze.getUser().setPhoneNumber(number);
