@@ -92,6 +92,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             details: details,
             number: number
         };
+        if (external_id) {
+          dataLayer.push({
+            event: 'submitForm',
+            external_id: external_id
+          });
         alert("The form was submitted");
         // Ensure to replace these calls with your logic or remove if not needed
         // braze.changeUser(external_id);
