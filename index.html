@@ -95,6 +95,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         if (external_id) {
           dataLayer.push({
             event: 'submitForm',
+            email: email,
+            firstname: firstname,
+            lastname: lastname,
+            destination: destination,
+            number: number,
+            details: details,
+            preference: preference,
+            customevent: customevent,
             external_id: external_id
           });
         }
